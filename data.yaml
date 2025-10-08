@@ -1,0 +1,7 @@
+
+path: C:/Users/Python1/Desktop/foggy_object_detection
+train: C:/Users/Python1/Desktop/foggy_object_detection/train
+val: C:/Users/Python1/Desktop/foggy_object_detection/valid
+
+nc: 5  # Number of classes
+names: ['Bus', 'Car', 'MotorBike', 'bicycle', 'person']  # Replace with your class names

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Skin Cancer Detection</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background: url('static/bg1.avif') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        
+         h1{
+            margin-left: 700px;
+         }
+
+        .container {
+            width: 50%;
+            margin: 0;
+            padding: 40px;
+            margin-left: 450px;
+            background: transparent;
+            box-sizing: border-box;
+            text-align: justify;
+            font-weight: bold;
+            color: darkorange;
+            margin-top: 150px;
+        }
+
+        h2 {
+            color: black;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+         /* Navbar styles */
+         .navbar {
+            background: transparent;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar-toggler {
+            display: none;
+        }
+
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            margin: 0;
+        }
+
+        .navbar-nav .nav-item {
+            position: relative;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #f1f1f1;
+        }
+
+        .navbar-nav .nav-item.active .nav-link {
+            background-color: #fff;
+            color: #2575fc;
+            font-weight: bold;
+        }
+
+        /* Responsive navbar */
+        @media (max-width: 768px) {
+            .navbar-toggler {
+                display: inline-block;
+                background: none;
+                border: none;
+                color: #fff;
+                font-size: 1.5rem;
+            }
+
+            .navbar-nav {
+                display: none;
+                flex-direction: column;
+                background: linear-gradient(to bottom, #6a11cb, #2575fc);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                gap: 10px;
+                padding: 10px 0;
+            }
+
+            .navbar-toggler.active + .navbar-nav {
+                display: flex;
+            }
+        }
+        /* Video background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay muted loop>
+        <source src="static/bvg1.mp4" type="video/mp4">
+    </video>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item " style="margin-left: 1450px;">
+                    <a class="nav-link" style="font-size: 20px;" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" style="font-size: 20px;" href="{{ url_for('about') }}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 20px;" href="{{ url_for('register') }}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: 20px;" href="{{ url_for('login') }}">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <div class="container">
+        <b><u><h2>About</h2></u></b>
+        <b><u><p>Foggy weather presents substantial challenges for vehicle detection systems due to reduced visibility and the obscured appearance of objects. 
+            To overcome these challenges, a novel vehicle and Humans detection algorithm based on an improved lightweight YOLOv10 model is introduced. The proposed 
+            algorithm leverages advanced preprocessing techniques, including data transformations, Dehaze Formers, and dark channel methods, to improve 
+            image quality and visibility. These preprocessing steps effectively reduce the impact of haze and low contrast, enabling the model to focus 
+            on meaningful features. An enhanced attention module is incorporated into the architecture to improve feature prioritization by capturing 
+            long-range dependencies and contextual information. This ensures that the model emphasizes relevant spatial and channel features, crucial 
+            for detecting small or partially visible vehicles in foggy scenes. Furthermore, the feature extraction process has been optimized, 
+            integrating an advanced lightweight module that improves the balance between computational efficiency and detection performance.            
+            This research addresses critical issues in adverse weather conditions, providing a robust framework for foggy weather vehicle and Humans 
+            detection.</p></u></b>
+    </div>
+</body>
+</html>
